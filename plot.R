@@ -2,24 +2,18 @@
 library(sf)
 library(ggplot2)
 library(showtext)
-library(extrafont)
 
 # Get data
 atl <- st_read("GC_Roads/GC_RD_GA/Roads_Atlanta_GA.shp")
-
-# Bellevue point
-bellevue <- c(33.786438268256425, -84.35381374455805)
-bellevue_deg <- c("33° 47' 11.04'' N", "84° 21' 13.68'' W")
-
 
 # Plot config ------------------------------------------------------------------
 colours <- c("base" = "#a7b4b5", "bellevue" = "#2a698b", "background" = "#FEFDF7")
 
 font_add("Harvey", "./harvey.otf")
+font_add("Free", "/usr/share/fonts/truetype/freefont/FreeMono.ttf")
 showtext_auto()
-extrafont::loadfonts()
 
-fonts <- c("title" = "Harvey", "subtitle" = "Helvetica")
+fonts <- c("title" = "Harvey", "subtitle" = "Free")
 
 
 # Make the plot ----------------------------------------------------------------
