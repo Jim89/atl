@@ -19,10 +19,13 @@ font_add("Harvey", "./harvey.otf")
 showtext_auto()
 extrafont::loadfonts()
 
-fonts <- c("title" = "Harvey", "subtitle" = "Fira")
+fonts <- c("title" = "Harvey", "subtitle" = "Helvetica")
 
 
 # Make the plot ----------------------------------------------------------------
+# Example
+# eg_plot <- ggirl::ggartprint_example_map("Seattle", "Washington")
+
 atl_plot <- ggplot(atl) +
     geom_sf(colour = colours[["base"]]) +
     geom_sf(
@@ -34,6 +37,7 @@ atl_plot <- ggplot(atl) +
         title = "Atlanta", 
         subtitle = "2018-2020"
     ) +
+    theme_grey(40) +
     theme(
         axis.text = element_blank(),
         axis.ticks = element_blank(),
@@ -45,14 +49,14 @@ atl_plot <- ggplot(atl) +
         plot.title = element_text(
             hjust = .5, 
             family = fonts[["title"]], 
-            size = rel(4), 
+            size = rel(3.5), 
             margin = margin(20),
             colour = colours[["bellevue"]]
         ),
         plot.subtitle = element_text(
             hjust = .5, 
             family = fonts[["subtitle"]], 
-            size = rel(2), 
+            size = rel(1.5), 
             margin = margin(5),
             colour = colours[["bellevue"]]
         ),        
@@ -81,4 +85,5 @@ ggirl::ggartprint(
     orientation = "portrait",
     contact_email = contact_email,
     address = delivery_address
-    )
+)
+
