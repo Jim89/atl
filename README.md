@@ -13,3 +13,5 @@ Comforts](https://creaturecomfortsbeer.com/wp-content/uploads/2019/01/creature-c
 font. Not _quite_ as nice, but very good for free!
 
 Thanks to Jacqueline Nolis for the `ggirl` package!
+
+![](atl.png)
